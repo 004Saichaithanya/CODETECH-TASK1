@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}Portfolio - Contact Page{% endblock %}
+
+{% block content %}
+<div class="contact-section">
+  <h2 class="text-center my-4">Get in Touch</h2>
+
+  <!-- Contact Information -->
+  <div class="contact-info">
+    <p><strong>Phone:</strong> +123 456 7890</p>
+    <p><strong>Email:</strong> contact@yourportfolio.com</p>
+    <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form-container">
+    <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<!-- Additional CSS for styling -->
+<style>
+  .contact-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    margin-left: 200px;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .contact-form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    border-radius: 5px;
+  }
+
+  .contact-form button {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+</style>
+{% endblock %}

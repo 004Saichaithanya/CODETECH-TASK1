@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}Portfolio - Achievements{% endblock %}
+
+{% block content %}
+<div class="achievements-section">
+  <h2 class="text-center my-4">Achievements</h2>
+  
+  <div class="achievement-cards">
+    <div class="card">
+      <img src="/static/images/ML.png" class="card-img-top" alt="Machine Learning Certificate">
+      <div class="card-body">
+        <h5 class="card-title">Machine Learning Course Certification</h5>
+        <p class="card-text">Completed a comprehensive Machine Learning course at Great Learning, covering algorithms, data processing, and model deployment.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/images/React.jpg" class="card-img-top" alt="React and FastAPI Certification">
+      <div class="card-body">
+        <h5 class="card-title">React and FastAPI Certification</h5>
+        <p class="card-text">Gained expertise in developing full-stack applications with React and FastAPI, focusing on responsive front-end design and efficient backend APIs.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/images/IIT.jpg" class="card-img-top" alt="Technical Workshop IIT">
+      <div class="card-body">
+        <h5 class="card-title">Technical Workshop at IIT</h5>
+        <p class="card-text">Participated in an advanced technical workshop at IIT, exploring concepts in AI and cloud computing through hands-on projects and real-world scenarios.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="/static/images/Coding.jpg" class="card-img-top" alt="Competitive Coding Achievement">
+      <div class="card-body">
+        <h5 class="card-title">Competitive Coding Achievement</h5>
+        <p class="card-text">Ranked in the top 5% in a national coding competition, demonstrating problem-solving skills and proficiency in data structures and algorithms.</p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Additional styling for a cleaner grid layout -->
+<style>
+  .achievements-section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .achievement-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .card img {
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+</style>
+{% endblock %}

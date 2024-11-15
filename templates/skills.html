@@ -1,0 +1,126 @@
+{% extends 'base.html' %} {% block title %}Portfolio - Skills Page{% endblock %}
+{% block content %}
+<body>
+  <section class="skills-section">
+    <h2>My Skills</h2>
+
+    <!-- Skills Progress Bars -->
+    <div class="skills-list">
+      {% for skill in skills %}
+      <div class="skill">
+        <label>{{ skill.name }}</label>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-valuenow="{{ skill.level }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="progress-bar {% if skill.level >= 75 %}bg-success {% elif skill.level >= 50 %}bg-warning {% elif skill.level >= 25 %}bg-danger {% else %}bg-danger{% endif %}"
+            style="width: {{ skill.level }}%;"
+          >
+            {{ skill.level }}%
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Add New Skill Form -->
+    <div class="new-skill-form">
+      <h3>Add a New Skill</h3>
+      <form action="{{ url_for('skills_page') }}" method="POST">
+        <input
+          type="text"
+          name="skill_name"
+          placeholder="Skill Name"
+          required
+        />
+        <input
+          type="number"
+          name="skill_level"
+          placeholder="Skill Level (0-100)"
+          min="0"
+          max="100"
+          required
+        />
+        <button type="submit">Add Skill</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CSS for Styling -->
+  <style>
+    body,
+    h2,
+    h3,
+    label {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .skills-section {
+      display: flex;
+      flex-direction: column;
+     justify-content: center;
+      height: 100%;
+      max-width: 900px;
+      width: 200%;
+      margin: auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: palegoldenrod;
+    }
+
+    .skills-list {
+      margin-top: 20px;
+      
+    }
+
+    .skill {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .new-skill-form {
+      margin-top: 30px;
+      text-align: center;
+      padding: 15px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .new-skill-form input,
+    .new-skill-form button {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #ced4da;
+      border-radius: 5px;
+    }
+
+    .new-skill-form button {
+      background-color: #007bff;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .new-skill-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .progress-bar {
+      font-weight: bold;
+    }
+  </style>
+</body>
+{% endblock %}

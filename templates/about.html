@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title %}Portfolio - About Page{% endblock %}
+
+{% block content %}
+<body>
+    <!-- About Section -->
+    <section class="about-section">
+        <h2 class="about-title">Who Am I?</h2>
+        <p class="about-description">
+            I am Poloju Sai Chaithanya, a passionate software developer with a focus on full-stack development and machine learning. 
+            With a keen eye for detail and a love for innovative technology, I bring complex ideas to life through code.
+        </p>
+        <p class="about-description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nemo nihil blanditiis dolores saepe optio necessitatibus,
+            alias accusamus cumque a fuga minus iure doloribus quae ex recusandae laboriosam, voluptatibus adipisci.
+        </p>
+    </section>
+
+    <!-- Skills/Experience Cards Section -->
+    <section class="cards-block">
+        <div class="card" style="width: 18rem;">
+            <img src="/static/images/frontend.png" class="card-img-top p-3" alt="Skill Image 1">
+            <div class="card-body">
+              <h5 class="card-title">Frontend Development</h5>
+              <p class="card-text">Skilled in HTML, CSS, JavaScript, and frameworks like React and Vue for responsive web applications.</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="/static/images/backend.png" class="card-img-top p-3" alt="Skill Image 2">
+            <div class="card-body">
+              <h5 class="card-title">Backend Development</h5>
+              <p class="card-text">Experienced with server-side frameworks such as Django and Flask, focusing on secure and scalable APIs.</p>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="/static/images/Machine.png" class="card-img-top p-3" alt="Skill Image 3">
+            <div class="card-body">
+              <h5 class="card-title">Machine Learning</h5>
+              <p class="card-text">Specialized in Python for machine learning, working on models that deliver actionable insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS Styling -->
+    <style>
+        /* Basic Reset */
+        body, h2, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .about-section {
+            padding: 50px 10%;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            color: #6c757d;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+            padding-bottom: 10px;
+        }
+
+        .cards-block {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px 0;
+            background-color: #ffffff;
+        }
+
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: #343a40;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+    </style>
+</body>
+{% endblock %}
+                                            
