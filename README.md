@@ -66,4 +66,12 @@ Create the Flask Environment
 Run the Application:
 python app.py
 
+### Output Screens:
+
+![image](https://github.com/user-attachments/assets/5ad8e5f9-30b2-4861-b6a6-58acde955a1d)
+
+
+
+
+
 
